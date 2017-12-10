@@ -1,7 +1,7 @@
-FROM resin/armv7hf-debian-qemu
-
-RUN apk add --no-cache ca-certificates python3
+FROM hypriot/rpi-python
 
 ENV SPEEDTEST_VERSION 1.0.7
 
-RUN pip3 install speedtest-cli==$SPEEDTEST_VERSION
+RUN sudo apt-get -y update
+RUN sudo apt-get -y install python3-pip
+RUN pip-3.2 install --index-url=https://pypi.python.org/simple/ speedtest-cli==$SPEEDTEST_VERSION
