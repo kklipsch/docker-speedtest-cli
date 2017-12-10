@@ -12,4 +12,5 @@ The images are:
 
 If you want to upgrade the speedtest-cli version, update the 2 base docker files.  Commit & push the changes and then tag the repository with the version number.  This repository is setup to the Docker Cloud and that should trigger a latest build and a version specific build (assuming the Docker Cloud stuff is still there when you go back looking for it).
 
+*Note:* At the time of this writing Docker Cloud did not support arm architectures so the rpi images need to be created manually on a arm based machine.
 
